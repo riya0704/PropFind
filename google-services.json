@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "603038082907",
+    "project_id": "propfind-3ep1i",
+    "storage_bucket": "propfind-3ep1i.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603038082907:android:4aac4e48262a3d78461c7e",
+        "android_client_info": {
+          "package_name": "prop.find"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-rLRvsiPJp7LPgpNLFYEMXD4-P4leBmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
