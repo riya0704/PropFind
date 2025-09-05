@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
-import Image from 'next/image';
 
 export function Newsletter() {
   const { toast } = useToast();
@@ -35,38 +34,27 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-16 sm:py-24 bg-primary">
       <div className="container">
-        <div className="relative overflow-hidden rounded-2xl bg-primary text-primary-foreground p-8 md:p-16">
-          <div className="absolute inset-0 z-0">
-             <Image 
-                src="https://picsum.photos/1200/400?random=2" 
-                alt="Abstract background"
-                fill
-                className="object-cover opacity-10"
-                data-ai-hint="abstract texture"
-            />
-          </div>
-          <div className="relative z-10 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Stay Updated</h2>
+          <div className="relative z-10 text-center text-primary-foreground">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Get in Touch with Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
-              Subscribe to our newsletter to get the latest updates on new properties, market trends, and exclusive deals.
+              Subscribe now for exclusive property insights and deals!
             </p>
-            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex gap-2">
+            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex items-center p-2 bg-white rounded-full">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-primary-foreground/90 text-primary placeholder:text-muted-foreground"
+                className="bg-transparent text-primary border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
               />
-              <Button type="submit" variant="secondary" disabled={loading}>
-                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Subscribe'}
+              <Button type="submit" variant="default" disabled={loading} className="rounded-full shrink-0">
+                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Submit'}
               </Button>
             </form>
           </div>
-        </div>
       </div>
     </section>
   );

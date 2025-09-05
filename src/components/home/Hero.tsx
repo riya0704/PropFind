@@ -1,34 +1,28 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
+import { PropertySearchForm } from './PropertySearchForm';
 
 export function Hero() {
   return (
-    <section className="relative h-[60vh] min-h-[500px] w-full">
+    <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center">
       <Image
         src="https://picsum.photos/1600/900?random=1"
         alt="Modern house with a pool"
         fill
-        className="object-cover"
+        className="object-cover rounded-b-3xl"
         priority
         data-ai-hint="modern house"
       />
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4">
+      <div className="absolute inset-0 bg-black/40 rounded-b-3xl" />
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 -mt-24">
         <h1 className="font-headline text-4xl font-bold md:text-6xl">
-          Find Your Dream Home
+          Featured Properties For Sale
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-neutral-200">
-          We provide a complete service for the sale, purchase or rental of real estate.
+          Discover, Buy, or Rent Verified Properties with Ease.
         </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/listings">View Properties</Link>
-          </Button>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="#">Contact Us</Link>
-          </Button>
-        </div>
+      </div>
+      <div className="absolute bottom-0 z-20 mb-[-60px]">
+        <PropertySearchForm />
       </div>
     </section>
   );

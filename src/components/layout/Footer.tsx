@@ -1,38 +1,23 @@
 import Link from 'next/link';
-import { Github, Linkedin, Twitter } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="md:col-span-2">
+    <footer className="bg-background text-foreground">
+      <div className="container py-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div>
             <Logo />
-            <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Your journey to finding the perfect home starts here. Discover properties, explore neighborhoods, and connect with professionals.
-            </p>
           </div>
-          <div>
-            <h3 className="font-semibold">Quick Links</h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/listings" className="text-muted-foreground hover:text-foreground">Listings</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">About Us</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Contact</Link></li>
-              <li><Link href="#" className="text-muted-foreground hover:text-foreground">Blog</Link></li>
-            </ul>
+          <nav className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium">
+              <Link href="/listings" className="text-muted-foreground hover:text-primary">For Sale</Link>
+              <Link href="/listings" className="text-muted-foreground hover:text-primary">Rentals</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary">New Projects</Link>
+              <Link href="#" className="text-muted-foreground hover:text-primary">Property News</Link>
+            </nav>
+          <div className="text-center text-sm text-muted-foreground">
+            <p>@2025 Propbot. All rights reserved</p>
           </div>
-          <div>
-            <h3 className="font-semibold">Follow Us</h3>
-            <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-foreground"><Twitter className="h-6 w-6" /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground"><Github className="h-6 w-6" /></Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground"><Linkedin className="h-6 w-6" /></Link>
-            </div>
-          </div>
-        </div>
-        <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} PropFind. All rights reserved.</p>
         </div>
       </div>
     </footer>

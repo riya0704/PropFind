@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Menu, X, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Menu, X, ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -23,8 +23,11 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/listings', label: 'Listings' },
-    { href: '/image-analyzer', label: 'AI Analyzer' },
+    { href: '#', label: 'Buy' },
+    { href: '/listings', label: 'Rent' },
+    { href: '#', label: 'Sell' },
+    { href: '#', label: 'About Us' },
+    { href: '#', label: 'Contact Us' },
   ];
   
   const NavLink = ({ href, label, className }: { href: string; label: string; className?: string; }) => (
@@ -32,7 +35,7 @@ export function Navbar() {
       href={href}
       className={cn(
         "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary" : "text-foreground/60",
+        pathname === href || (href === '#' && label === 'Buy') ? "text-primary font-bold" : "text-foreground/80",
         className
       )}
       onClick={() => setMobileMenuOpen(false)}
@@ -68,35 +71,32 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
+    <header className="absolute top-0 z-50 w-full bg-transparent">
+      <div className="container flex h-20 items-center">
+        <div className="mr-8 hidden md:flex">
           <Logo />
         </div>
-        <div className="flex items-center gap-6 text-sm">
-          <nav className="hidden gap-6 md:flex">
-            {navLinks.map(link => <NavLink key={link.href} {...link} />)}
+        <div className="flex items-center gap-8 text-sm">
+          <nav className="hidden gap-8 md:flex">
+            {navLinks.map(link => <NavLink key={link.href + link.label} {...link} />)}
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           {loading ? (
-            <Skeleton className="h-8 w-20" />
+            <Skeleton className="h-10 w-32 rounded-full" />
           ) : user ? (
             <>
-              <span className="hidden text-sm font-medium md:block">
+              <span className="hidden text-sm font-medium md:block text-white">
                 Welcome, {user.displayName || user.email?.split('@')[0]}
               </span>
-              <Button variant="outline" size="sm" onClick={logout}>
+              <Button variant="outline" size="sm" onClick={logout} className="rounded-full bg-white/20 text-white border-white/50 hover:bg-white/30 hover:text-white">
                 Logout
               </Button>
             </>
           ) : (
             <nav className="hidden md:flex items-center space-x-2">
-              <Button variant="ghost" size="sm" asChild>
-                <Link href="/login">Log In</Link>
-              </Button>
-              <Button size="sm" asChild>
-                <Link href="/signup">Sign Up</Link>
+              <Button size="lg" asChild className="rounded-full">
+                <Link href="/login">Login / Register <ChevronRight className="ml-1 h-4 w-4" /></Link>
               </Button>
             </nav>
           )}
@@ -104,7 +104,7 @@ export function Navbar() {
         <div className="md:hidden">
            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-white">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
@@ -121,7 +121,7 @@ export function Navbar() {
                     </SheetTrigger>
                 </div>
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map(link => <NavLink key={link.href} {...link} />)}
+                  {navLinks.map(link => <NavLink key={link.href} {...link} className="text-foreground/60"/>)}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4 pt-6">
                   {loading ? null : user ? (
@@ -131,11 +131,8 @@ export function Navbar() {
                       </>
                   ) : (
                       <>
-                          <Button variant="ghost" asChild>
-                              <Link href="/login" onClick={() => setMobileMenuOpen(false)}>Log In</Link>
-                          </Button>
-                          <Button asChild>
-                              <Link href="/signup" onClick={() => setMobileMenuOpen(false)}>Sign Up</Link>
+                         <Button asChild className="rounded-full">
+                            <Link href="/login" onClick={() => setMobileMenuOpen(false)}>Login / Register</Link>
                           </Button>
                       </>
                   )}
