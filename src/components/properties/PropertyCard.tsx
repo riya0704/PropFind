@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { MapPin, Star } from 'lucide-react';
+import { MapPin, Bed, Bath, LandPlot } from 'lucide-react';
 import type { Property } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
 
 interface PropertyCardProps {
   property: Property;
@@ -13,7 +14,7 @@ interface PropertyCardProps {
 export function PropertyCard({ property, variant = 'default' }: PropertyCardProps) {
   return (
     <Link href={`/listings/${property.id}`} className="group block h-full">
-      <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-xl flex flex-col h-full rounded-2xl bg-white">
+      <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-xl flex flex-col h-full rounded-2xl bg-white border">
         <CardHeader className="p-0">
           <div className="relative h-56 w-full">
             <Image
@@ -24,32 +25,41 @@ export function PropertyCard({ property, variant = 'default' }: PropertyCardProp
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               data-ai-hint="house exterior"
             />
+             <Badge className="absolute top-4 left-4" variant={property.type === 'sale' ? 'default' : 'accent'}>
+                For {property.type}
+            </Badge>
           </div>
         </CardHeader>
-        <CardContent className="p-4 space-y-2 flex-grow">
-          <h3 className="text-lg font-bold leading-tight truncate text-primary" title={property.name}>
+        <CardContent className="p-4 space-y-3 flex-grow">
+          <h3 className="text-lg font-bold leading-tight truncate text-foreground" title={property.name}>
             {property.name}
           </h3>
           <div className="flex items-center text-sm text-muted-foreground gap-2">
             <MapPin className="w-4 h-4 shrink-0" />
             <span className="truncate">{property.city}, {property.state}</span>
           </div>
-          <p className="text-sm text-muted-foreground line-clamp-2">
-            Spacious {property.bedrooms}BHK apartment in a prime location with modern amenities.
-          </p>
+          <div className="flex justify-between text-sm text-muted-foreground pt-2 border-t border-dashed">
+            <div className="flex items-center gap-1">
+                <Bed className="w-4 h-4 text-primary" />
+                <span>{property.bedrooms} Beds</span>
+            </div>
+            <div className="flex items-center gap-1">
+                <Bath className="w-4 h-4 text-primary" />
+                <span>{property.bathrooms} Baths</span>
+            </div>
+            <div className="flex items-center gap-1">
+                <LandPlot className="w-4 h-4 text-primary" />
+                <span>{property.area} sqft</span>
+            </div>
+          </div>
         </CardContent>
-        <CardFooter className="p-4 flex justify-between items-center bg-white mt-auto">
-          {variant === 'rent' ? (
-            <p className="text-lg font-bold text-foreground">
-              ${property.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">/ month</span>
-            </p>
-          ) : (
-            <p className="text-lg font-bold text-foreground">
+        <CardFooter className="p-4 flex justify-between items-center bg-secondary/50 mt-auto">
+            <p className="text-lg font-bold text-primary">
               ${property.price.toLocaleString()}
+              {property.type === 'rent' && <span className="text-sm font-normal text-muted-foreground">/ month</span>}
             </p>
-          )}
-          <Button asChild size="md" className="rounded-lg">
-            <Link href={`/listings/${property.id}`}>{variant === 'rent' ? 'Rent Now' : 'Buy Now'}</Link>
+          <Button asChild size="sm">
+            <Link href={`/listings/${property.id}`}>View Details</Link>
           </Button>
         </CardFooter>
       </Card>

@@ -34,9 +34,9 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-primary/90">
+    <section className="py-16 sm:py-24 bg-primary text-primary-foreground">
       <div className="container">
-          <div className="relative z-10 text-center text-primary-foreground">
+          <div className="relative z-10 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Get in Touch with Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
               Subscribe now for exclusive property insights and deals!
@@ -50,7 +50,7 @@ export function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
               />
-              <Button type="submit" variant="default" disabled={loading} className="rounded-full shrink-0">
+              <Button type="submit" variant="secondary" disabled={loading} className="rounded-full shrink-0 text-primary hover:bg-secondary/90">
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Submit'}
               </Button>
             </form>

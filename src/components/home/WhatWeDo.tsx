@@ -36,14 +36,14 @@ export function WhatWeDo() {
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <Card key={index} className="text-center group hover:bg-white hover:shadow-xl transition-all">
+            <Card key={index} className="text-center group hover:bg-white hover:shadow-xl transition-all rounded-2xl">
               <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary group-hover:text-white transition-all">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-all">
                   {service.icon}
                 </div>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl font-semibold mb-2">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{service.title}</CardTitle>
                 <p className="text-muted-foreground text-sm">{service.description}</p>
               </CardContent>
             </Card>

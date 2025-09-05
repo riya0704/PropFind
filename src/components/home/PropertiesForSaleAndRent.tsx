@@ -4,6 +4,8 @@ import { useMemo } from 'react';
 import type { Property } from '@/lib/types';
 import { PropertyCard } from '@/components/properties/PropertyCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 interface PropertiesForSaleAndRentProps {
   properties: Property[];
@@ -14,17 +16,17 @@ export function PropertiesForSaleAndRent({ properties }: PropertiesForSaleAndRen
   const propertiesForRent = useMemo(() => properties.filter(p => p.type === 'rent').slice(0, 8), [properties]);
   
   return (
-    <section className="py-16 sm:py-24 bg-secondary">
+    <section className="py-24 sm:py-32">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Available Properties</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Explore Our Available Properties</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Explore our curated list of properties available for sale and rent.
+            Discover a variety of properties tailored to your needs, whether you're looking to buy or rent.
           </p>
         </div>
 
         <Tabs defaultValue="sale" className="w-full">
-          <TabsList className="grid w-full max-w-sm mx-auto grid-cols-2">
+          <TabsList className="grid w-full max-w-sm mx-auto grid-cols-2 mb-8">
             <TabsTrigger value="sale">For Sale</TabsTrigger>
             <TabsTrigger value="rent">For Rent</TabsTrigger>
           </TabsList>
@@ -38,11 +40,16 @@ export function PropertiesForSaleAndRent({ properties }: PropertiesForSaleAndRen
           <TabsContent value="rent" className="mt-8">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {propertiesForRent.map(property => (
-                <PropertyCard key={property.id} property={property} />
+                <PropertyCard key={property.id} property={property} variant="rent"/>
               ))}
             </div>
           </TabsContent>
         </Tabs>
+        <div className="text-center mt-12">
+          <Button asChild size="lg" className="rounded-full">
+            <Link href="/listings">Explore All Properties</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

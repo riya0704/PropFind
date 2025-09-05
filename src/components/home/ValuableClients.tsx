@@ -27,12 +27,12 @@ const services = [
 
 export function ValuableClients() {
     return (
-      <section className="py-24">
+      <section className="py-24 bg-secondary">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px]">
               <Image src="https://picsum.photos/600/800?random=11" alt="Modern white house" className="absolute top-0 left-0 w-2/3 h-2/3 object-cover rounded-2xl" width={400} height={533} data-ai-hint="modern house" />
-              <Image src="https://picsum.photos/600/800?random=12" alt="A-frame cabin" className="absolute bottom-0 right-0 w-2/3 h-2/3 object-cover rounded-2xl border-8 border-background" width={400} height={533} data-ai-hint="cabin woods" />
+              <Image src="https://picsum.photos/600/800?random=12" alt="A-frame cabin" className="absolute bottom-0 right-0 w-2/3 h-2/3 object-cover rounded-2xl border-8 border-secondary" width={400} height={533} data-ai-hint="cabin woods" />
             </div>
             <div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">We Provide Latest Properties For Our Valuable Clients</h2>

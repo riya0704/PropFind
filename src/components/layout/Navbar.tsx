@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Menu, X, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -23,9 +23,9 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '#', label: 'Buy' },
+    { href: '/listings', label: 'Buy' },
     { href: '/listings', label: 'Rent' },
-    { href: '#', label: 'Sell' },
+    { href: '/listings', label: 'Sell' },
     { href: '#', label: 'About Us' },
     { href: '#', label: 'Contact Us' },
   ];
@@ -47,56 +47,35 @@ export function Navbar() {
   const isAuthPage = pathname === '/login' || pathname === '/signup';
   const isHomePage = pathname === '/';
 
-  if (isAuthPage) {
-    return (
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-           <div className="flex items-center gap-6">
-            <Button variant="outline" size="sm" asChild>
-                <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Homepage</Link>
-            </Button>
-           </div>
-
-          <div className="flex-1 flex justify-center">
-              <Logo />
-          </div>
-          
-          <div className="flex items-center gap-4">
-             <Button variant="default" size="sm" asChild>
-                  <Link href="#">About Us <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-          </div>
-        </div>
-      </header>
-    )
-  }
-
   return (
     <header className={cn(
         "absolute top-0 z-50 w-full",
         !isHomePage && "sticky bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
       )}>
       <div className="container flex h-20 items-center">
-        <div className="mr-8 hidden md:flex">
+        <div className="mr-auto hidden md:flex">
           <Logo />
         </div>
-        <div className="flex items-center gap-8 text-sm">
-          <nav className="hidden gap-8 md:flex">
-            {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href && (isHomePage ? "text-white font-bold" : "text-primary font-bold"))} />)}
-          </nav>
+        <div className="md:hidden mr-auto">
+          <Logo />
         </div>
+
+        <nav className="hidden gap-8 md:flex">
+          {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href && (isHomePage ? "text-white font-bold" : "text-primary font-bold"))} />)}
+        </nav>
+
         <div className="flex flex-1 items-center justify-end space-x-4">
           {loading ? (
             <Skeleton className="h-10 w-32 rounded-full" />
           ) : user ? (
-            <>
-              <span className={cn("hidden text-sm font-medium md:block", isHomePage ? "text-white" : "text-foreground")}>
+            <div className='hidden md:flex items-center gap-4'>
+              <span className={cn("text-sm font-medium", isHomePage ? "text-white" : "text-foreground")}>
                 Welcome, {user.displayName || user.email?.split('@')[0]}
               </span>
               <Button variant="outline" size="sm" onClick={logout} className={cn("rounded-full", isHomePage && "bg-white/20 text-white border-white/50 hover:bg-white/30 hover:text-white")}>
                 Logout
               </Button>
-            </>
+            </div>
           ) : (
             <nav className="hidden md:flex items-center space-x-2">
               <Button size="lg" asChild className="rounded-full">
@@ -125,7 +104,7 @@ export function Navbar() {
                     </SheetTrigger>
                 </div>
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map(link => <NavLink key={link.href} {...link} className="text-foreground/60"/>)}
+                  {navLinks.map(link => <NavLink key={link.href} {...link} className="text-lg text-foreground/80"/>)}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4 pt-6">
                   {loading ? null : user ? (
