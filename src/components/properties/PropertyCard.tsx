@@ -58,8 +58,8 @@ export function PropertyCard({ property, variant = 'default' }: PropertyCardProp
               ${property.price.toLocaleString()}
               {property.type === 'rent' && <span className="text-sm font-normal text-muted-foreground">/ month</span>}
             </p>
-          <Button asChild size="sm">
-            <Link href={`/listings/${property.id}`}>View Details</Link>
+          <Button size="sm" asChild={false}>
+            View Details
           </Button>
         </CardFooter>
       </Card>
