@@ -5,6 +5,7 @@ import { WhatWeDo } from '@/components/home/WhatWeDo';
 import { StartJourney } from '@/components/home/StartJourney';
 import { ValuableClients } from '@/components/home/ValuableClients';
 import { PropertiesForSaleAndRent } from '@/components/home/PropertiesForSaleAndRent';
+import { FeaturedProperties } from '@/components/home/FeaturedProperties';
 
 export default async function HomePage() {
   const properties = await getProperties();
@@ -13,6 +14,7 @@ export default async function HomePage() {
     <>
       <Hero />
       <WhatWeDo />
+      <FeaturedProperties properties={properties} />
       <PropertiesForSaleAndRent properties={properties} />
       <ValuableClients />
       <StartJourney />

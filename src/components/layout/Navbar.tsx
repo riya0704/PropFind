@@ -25,7 +25,7 @@ export function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/listings', label: 'Buy' },
     { href: '/listings', label: 'Rent' },
-    { href: '/listings', label: 'Sell' },
+    { href: '/image-analyzer', label: 'Sell' },
     { href: '#', label: 'About Us' },
     { href: '#', label: 'Contact Us' },
   ];
