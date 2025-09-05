@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import type { Property } from "@/lib/types";
 
 export function FeaturedProperties({ properties }: { properties: Property[] }) {
-  const featuredProperties = properties.slice(0, 2);
+  const featuredProperties = properties.slice(0, 3);
 
   return (
     <section className="py-24 sm:py-32">
@@ -16,11 +16,11 @@ export function FeaturedProperties({ properties }: { properties: Property[] }) {
           </div>
           <Button asChild variant="outline" className="rounded-full">
             <Link href="/listings">
-              See 268 New Projects <ArrowRight className="ml-2 h-4 w-4" />
+              See All Projects <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-3">
           {featuredProperties.map(property => (
             <PropertyCard key={property.id} property={property} />
           ))}

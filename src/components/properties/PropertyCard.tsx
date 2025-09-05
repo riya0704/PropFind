@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { MapPin, Bookmark } from 'lucide-react';
+import { MapPin, Star } from 'lucide-react';
 import type { Property } from '@/lib/types';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
@@ -7,14 +7,15 @@ import { Button } from '../ui/button';
 
 interface PropertyCardProps {
   property: Property;
+  variant?: 'default' | 'rent';
 }
 
-export function PropertyCard({ property }: PropertyCardProps) {
+export function PropertyCard({ property, variant = 'default' }: PropertyCardProps) {
   return (
     <Link href={`/listings/${property.id}`} className="group block h-full">
-      <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 flex flex-col h-full rounded-2xl">
+      <Card className="overflow-hidden transition-all duration-300 group-hover:shadow-xl flex flex-col h-full rounded-2xl bg-white">
         <CardHeader className="p-0">
-          <div className="relative h-64 w-full">
+          <div className="relative h-56 w-full">
             <Image
               src={property.image}
               alt={property.name}
@@ -25,31 +26,30 @@ export function PropertyCard({ property }: PropertyCardProps) {
             />
           </div>
         </CardHeader>
-        <CardContent className="p-6 space-y-3 flex-grow">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-xl font-bold leading-tight truncate text-primary" title={property.name}>
-                  {property.name}
-                </h3>
-                <div className="flex items-center text-sm text-muted-foreground gap-2 mt-1">
-                    <MapPin className="w-4 h-4 shrink-0" />
-                    <span className="truncate">{property.city}, {property.state}</span>
-                </div>
-              </div>
-              <Button variant="outline" size="icon" className="rounded-full border-2 text-primary hover:bg-primary/10 hover:text-primary shrink-0">
-                <Bookmark className="w-5 h-5" />
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground">
-                Spacious {property.bedrooms}BHK apartment in a prime location with modern amenities.
-            </p>
-        </CardContent>
-        <CardFooter className="p-6 flex justify-between items-center bg-white mt-auto">
-          <p className="text-2xl font-bold text-foreground">
-            ${property.price.toLocaleString()}
+        <CardContent className="p-4 space-y-2 flex-grow">
+          <h3 className="text-lg font-bold leading-tight truncate text-primary" title={property.name}>
+            {property.name}
+          </h3>
+          <div className="flex items-center text-sm text-muted-foreground gap-2">
+            <MapPin className="w-4 h-4 shrink-0" />
+            <span className="truncate">{property.city}, {property.state}</span>
+          </div>
+          <p className="text-sm text-muted-foreground line-clamp-2">
+            Spacious {property.bedrooms}BHK apartment in a prime location with modern amenities.
           </p>
-          <Button asChild size="lg" className="rounded-full">
-            <Link href={`/listings/${property.id}`}>Know More</Link>
+        </CardContent>
+        <CardFooter className="p-4 flex justify-between items-center bg-white mt-auto">
+          {variant === 'rent' ? (
+            <p className="text-lg font-bold text-foreground">
+              ${property.price.toLocaleString()} <span className="text-sm font-normal text-muted-foreground">/ month</span>
+            </p>
+          ) : (
+            <p className="text-lg font-bold text-foreground">
+              ${property.price.toLocaleString()}
+            </p>
+          )}
+          <Button asChild size="md" className="rounded-lg">
+            <Link href={`/listings/${property.id}`}>{variant === 'rent' ? 'Rent Now' : 'Buy Now'}</Link>
           </Button>
         </CardFooter>
       </Card>

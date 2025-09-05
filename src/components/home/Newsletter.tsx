@@ -34,18 +34,18 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-primary">
+    <section className="py-16 sm:py-24 bg-primary/90">
       <div className="container">
           <div className="relative z-10 text-center text-primary-foreground">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Get in Touch with Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
               Subscribe now for exclusive property insights and deals!
             </p>
-            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex items-center p-2 bg-white rounded-full">
+            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex items-center p-2 bg-white/20 rounded-full">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-transparent text-primary border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground"
+                className="bg-transparent text-white border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-neutral-300"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}

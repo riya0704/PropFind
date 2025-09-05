@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Menu, X, ArrowRight, ArrowLeft, ChevronRight } from 'lucide-react';
+import { Menu, X, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useState } from 'react';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -35,7 +35,7 @@ export function Navbar() {
       href={href}
       className={cn(
         "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href || (href === '#' && label === 'Buy') ? "text-primary font-bold" : "text-foreground/80",
+        pathname === href ? "text-primary font-bold" : "text-foreground/80",
         className
       )}
       onClick={() => setMobileMenuOpen(false)}
@@ -45,6 +45,7 @@ export function Navbar() {
   );
 
   const isAuthPage = pathname === '/login' || pathname === '/signup';
+  const isHomePage = pathname === '/';
 
   if (isAuthPage) {
     return (
@@ -71,14 +72,17 @@ export function Navbar() {
   }
 
   return (
-    <header className="absolute top-0 z-50 w-full bg-transparent">
+    <header className={cn(
+        "absolute top-0 z-50 w-full",
+        !isHomePage && "sticky bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
+      )}>
       <div className="container flex h-20 items-center">
         <div className="mr-8 hidden md:flex">
           <Logo />
         </div>
         <div className="flex items-center gap-8 text-sm">
           <nav className="hidden gap-8 md:flex">
-            {navLinks.map(link => <NavLink key={link.href + link.label} {...link} />)}
+            {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href && (isHomePage ? "text-white font-bold" : "text-primary font-bold"))} />)}
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
@@ -86,17 +90,17 @@ export function Navbar() {
             <Skeleton className="h-10 w-32 rounded-full" />
           ) : user ? (
             <>
-              <span className="hidden text-sm font-medium md:block text-white">
+              <span className={cn("hidden text-sm font-medium md:block", isHomePage ? "text-white" : "text-foreground")}>
                 Welcome, {user.displayName || user.email?.split('@')[0]}
               </span>
-              <Button variant="outline" size="sm" onClick={logout} className="rounded-full bg-white/20 text-white border-white/50 hover:bg-white/30 hover:text-white">
+              <Button variant="outline" size="sm" onClick={logout} className={cn("rounded-full", isHomePage && "bg-white/20 text-white border-white/50 hover:bg-white/30 hover:text-white")}>
                 Logout
               </Button>
             </>
           ) : (
             <nav className="hidden md:flex items-center space-x-2">
               <Button size="lg" asChild className="rounded-full">
-                <Link href="/login">Login / Register <ChevronRight className="ml-1 h-4 w-4" /></Link>
+                <Link href="/login">Login / Register</Link>
               </Button>
             </nav>
           )}
@@ -104,7 +108,7 @@ export function Navbar() {
         <div className="md:hidden">
            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white">
+              <Button variant="ghost" size="icon" className={cn(isHomePage ? "text-white" : "text-foreground")}>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
