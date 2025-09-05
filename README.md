@@ -29,8 +29,6 @@ You can start editing the page by modifying `src/app/page.tsx`. The page auto-up
 ## Technologies Used
 
 *   [Next.js](https://nextjs.org/) - React framework for building server-side rendered and static web applications.
-*   [Firebase](https://firebase.google.com/) - Platform for building web and mobile applications, providing services like authentication, database, and hosting.
-*   [Genkit](https://firebase.google.com/docs/genkit) - An open-source framework from Google to build, deploy and monitor AI-powered features.
 *   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
 *   [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
 
@@ -39,5 +37,4 @@ You can start editing the page by modifying `src/app/page.tsx`. The page auto-up
 To learn more about the technologies used in this project, check out the following resources:
 
 *   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-*   [Firebase Documentation](https://firebase.google.com/docs) - learn about the Firebase platform.
-*   [Genkit Documentation](https://firebase.google.com/docs/genkit) - learn about Genkit.
+
