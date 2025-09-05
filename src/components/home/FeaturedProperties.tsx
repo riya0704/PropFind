@@ -1,0 +1,34 @@
+import { PropertyCard } from "@/components/properties/PropertyCard";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import type { Property } from "@/lib/types";
+
+export function FeaturedProperties({ properties }: { properties: Property[] }) {
+  const featuredProperties = properties.slice(0, 4);
+
+  return (
+    <section className="py-16 sm:py-24">
+      <div className="container">
+        <div className="flex flex-wrap justify-between items-center gap-4 mb-12">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Featured Properties</h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Handpicked properties by our team.
+            </p>
+          </div>
+          <Button asChild variant="outline">
+            <Link href="/listings">
+              View All <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {featuredProperties.map(property => (
+            <PropertyCard key={property.id} property={property} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
