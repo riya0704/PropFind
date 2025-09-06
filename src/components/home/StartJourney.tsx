@@ -11,23 +11,23 @@ export function StartJourney() {
                  <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Start Your Journey Today!</h2>
                     <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                        Get started with our seamless and easy process to find your dream home.
+                        Create a profile in seconds and find your ideal home.
                     </p>
                 </div>
                 <div className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-4xl mx-auto border">
                     <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-4">
-                        <Input placeholder="Enter your name" className="h-14 text-base border-gray-200 focus:ring-primary" />
+                        <Input placeholder="Enter Your Name" className="h-14 text-base border-gray-200 focus:ring-primary" />
                         <Select>
                             <SelectTrigger className="w-full h-14 text-base border-gray-200 focus:ring-primary">
-                                <SelectValue placeholder="Select type" />
+                                <SelectValue placeholder="Select User Type" />
                             </SelectTrigger>
                             <SelectContent>
-                                <SelectItem value="house">House</SelectItem>
-                                <SelectItem value="apartment">Apartment</SelectItem>
-                                <SelectItem value="condo">Condo</SelectItem>
+                                <SelectItem value="buyer">Buyer</SelectItem>
+                                <SelectItem value="renter">Renter</SelectItem>
+                                <SelectItem value="seller">Seller</SelectItem>
                             </SelectContent>
                         </Select>
-                        <Input placeholder="Enter your location" className="h-14 text-base border-gray-200 focus:ring-primary" />
+                        <Input placeholder="Enter Your Location" className="h-14 text-base border-gray-200 focus:ring-primary" />
                         
                         <Button size="lg" className="w-full h-14 text-base rounded-xl">Continue</Button>
                     </div>
