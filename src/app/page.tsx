@@ -13,12 +13,14 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <WhatWeDo />
-      <FeaturedProperties properties={properties} />
-      <PropertiesForSaleAndRent properties={properties} />
-      <ValuableClients />
-      <StartJourney />
-      <Newsletter />
+      <div className="mt-32">
+        <WhatWeDo />
+        <FeaturedProperties properties={properties} />
+        <PropertiesForSaleAndRent properties={properties} />
+        <ValuableClients />
+        <StartJourney />
+        <Newsletter />
+      </div>
     </>
   );
 }

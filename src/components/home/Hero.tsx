@@ -8,11 +8,11 @@ export function Hero() {
         src="https://picsum.photos/1600/900?random=2"
         alt="Large barn-style house at dusk"
         fill
-        className="object-cover rounded-b-3xl"
+        className="object-cover"
         priority
         data-ai-hint="large house dusk"
       />
-      <div className="absolute inset-0 bg-black/40 rounded-b-3xl" />
+      <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 -mt-32">
         <h1 className="font-headline text-4xl font-bold md:text-6xl">
           Find Your Dream Home in One Click!

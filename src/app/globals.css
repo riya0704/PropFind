@@ -56,4 +56,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  section {
+    @apply py-16 sm:py-24;
+  }
 }

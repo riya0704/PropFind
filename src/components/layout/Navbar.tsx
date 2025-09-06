@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -60,7 +60,7 @@ export function Navbar() {
           <Logo />
         </div>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-8 md:flex mx-auto">
           {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href && (isHomePage ? "text-white font-bold" : "text-primary font-bold"))} />)}
         </nav>
 
@@ -79,7 +79,7 @@ export function Navbar() {
           ) : (
             <nav className="hidden md:flex items-center space-x-2">
               <Button size="lg" asChild className="rounded-full">
-                <Link href="/login">Login / Register</Link>
+                <Link href="/login">Login / Register <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
             </nav>
           )}

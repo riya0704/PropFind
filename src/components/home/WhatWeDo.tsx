@@ -26,7 +26,7 @@ const services = [
 
 export function WhatWeDo() {
   return (
-    <section className="py-24 sm:py-32 bg-secondary" style={{marginTop: '80px'}}>
+    <section>
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">What We Do?</h2>
