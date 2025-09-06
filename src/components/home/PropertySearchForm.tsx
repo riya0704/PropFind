@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Home, MapPin, Search, Edit } from "lucide-react"
+import { Home, Edit } from "lucide-react"
 
 const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -57,7 +57,6 @@ export function PropertySearchForm() {
                     </SelectContent>
                 </Select>
                 <Button size="lg" className="w-full md:w-auto md:flex-grow h-14 text-base rounded-full">
-                    <Search className="h-5 w-5 mr-2" />
                     Find Property
                 </Button>
             </div>
