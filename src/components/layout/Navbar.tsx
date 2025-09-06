@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -25,7 +25,7 @@ export function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/listings', label: 'Buy' },
-    { href: '/listings', label: 'Rent' },
+    { href: '#', label: 'Rent' },
     { href: '/image-analyzer', label: 'Sell' },
     { href: '#', label: 'About Us' },
     { href: '#', label: 'Contact Us' },
@@ -35,8 +35,9 @@ export function Navbar() {
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        pathname === href ? "text-primary font-bold" : "text-foreground/80",
+        "text-sm font-medium transition-colors relative",
+        "after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100",
+        pathname === href ? "text-primary font-bold after:scale-x-100" : "text-foreground/80",
         className
       )}
       onClick={() => setMobileMenuOpen(false)}
@@ -54,18 +55,15 @@ export function Navbar() {
         !isHomePage && "sticky bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
       )}>
       <div className="container flex h-20 items-center">
-        <div className="mr-auto hidden md:flex">
-          <Logo />
-        </div>
-        <div className="md:hidden mr-auto">
+        <div className="mr-auto flex-shrink-0">
           <Logo />
         </div>
 
-        <nav className="hidden gap-8 md:flex mx-auto">
-          {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href && (isHomePage ? "text-white font-bold" : "text-primary font-bold"))} />)}
+        <nav className="hidden gap-8 md:flex mx-auto items-center">
+          {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href ? (isHomePage ? "text-white font-bold after:bg-white" : "text-primary font-bold") : (isHomePage ? "text-white/80" : "text-foreground/80"),  isHomePage && "after:bg-white" )} />)}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-shrink-0 items-center justify-end space-x-4">
           {loading ? (
             <Skeleton className="h-10 w-32 rounded-full" />
           ) : user ? (

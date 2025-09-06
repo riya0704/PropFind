@@ -25,10 +25,10 @@ const ArrowRightLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function PropertySearchForm() {
     return (
-        <div className="bg-white p-6 rounded-2xl shadow-2xl w-full relative">
+        <div className="bg-white p-8 rounded-2xl shadow-2xl w-full relative">
              <Button variant="outline" className="absolute top-6 right-6 bg-white rounded-full text-primary border-primary hover:bg-primary hover:text-white">List Your Property</Button>
-            <div className="relative mb-4">
-                <Input placeholder="Search Location..." className="h-14 pl-12 text-base border-gray-200 focus-visible:ring-1 focus-visible:ring-primary" />
+            <div className="relative mb-6">
+                <Input placeholder="Search Location..." className="h-14 pl-12 text-base border-gray-200 focus-visible:ring-1 focus-visible:ring-primary w-full" />
                 <div className="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground">
                     <LocationIcon />
                 </div>

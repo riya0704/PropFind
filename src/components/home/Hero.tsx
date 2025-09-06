@@ -12,9 +12,9 @@ export function Hero() {
         priority
         data-ai-hint="large house dusk"
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 -mt-32">
-        <h1 className="font-headline text-4xl font-bold md:text-6xl">
+        <h1 className="font-headline text-5xl font-bold md:text-6xl tracking-wider">
           Find Your Dream Home in One Click!
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-neutral-200">
