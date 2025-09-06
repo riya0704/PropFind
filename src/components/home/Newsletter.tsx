@@ -36,7 +36,7 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-primary text-primary-foreground">
+    <section className="py-16 sm:py-24 bg-[#1E3A8ACC] text-primary-foreground">
       <div className="container">
           <div className="relative z-10 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Get in Touch with Us</h2>
