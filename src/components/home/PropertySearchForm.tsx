@@ -14,10 +14,10 @@ const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function PropertySearchForm() {
     return (
-        <div className="bg-background p-6 rounded-full shadow-2xl w-full border">
+        <div className="bg-background p-4 rounded-full shadow-2xl w-full border">
             <div className="flex flex-col md:flex-row items-center gap-4">
                 <Select defaultValue="buy">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8">
+                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
                          <div className="flex items-center gap-2">
                             <Edit className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="For Buying" />
@@ -28,8 +28,9 @@ export function PropertySearchForm() {
                         <SelectItem value="rent">For Rent</SelectItem>
                     </SelectContent>
                 </Select>
+                <div className="w-px h-8 bg-border hidden md:block" />
                 <Select defaultValue="house">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8">
+                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
                          <div className="flex items-center gap-2">
                              <Home className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="House" />
@@ -41,8 +42,9 @@ export function PropertySearchForm() {
                         <SelectItem value="condo">Condo</SelectItem>
                     </SelectContent>
                 </Select>
+                <div className="w-px h-8 bg-border hidden md:block" />
                 <Select defaultValue="indonesia">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8">
+                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
                          <div className="flex items-center gap-2">
                             <MapPin className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="Indonesia" />
