@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { PropertySearchForm } from './PropertySearchForm';
 
 export function Hero() {
   return (
@@ -24,9 +23,6 @@ export function Hero() {
                 Discover, Buy, or Rent Verified Properties with Ease.
               </p>
             </div>
-          </div>
-           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-20 w-full max-w-5xl px-4">
-            <PropertySearchForm />
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { ValuableClients } from '@/components/home/ValuableClients';
 import { PropertiesForSale } from '@/components/home/PropertiesForSale';
 import { FeaturedProperties } from '@/components/home/FeaturedProperties';
 import { PropertiesForRent } from '@/components/home/PropertiesForRent';
+import { PropertySearchForm } from '@/components/home/PropertySearchForm';
 
 export default async function HomePage() {
   const properties = await getProperties();
@@ -14,6 +15,9 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <div className="container -mt-20 relative z-20">
+        <PropertySearchForm />
+      </div>
       <div className="mt-12">
         <WhatWeDo />
         <FeaturedProperties properties={properties} />
