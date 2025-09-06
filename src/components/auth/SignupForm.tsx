@@ -96,8 +96,8 @@ export function SignupForm() {
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Input placeholder="Enter Your Email Id" {...field} className="pl-10 h-12" />
-                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                      <Input placeholder="Enter Your Email Id" {...field} className="h-12 pr-10" />
+                      <Mail className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                     </div>
                   </FormControl>
                   <FormMessage />
