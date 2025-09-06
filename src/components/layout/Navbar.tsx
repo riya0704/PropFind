@@ -46,21 +46,15 @@ export function Navbar() {
     </Link>
   );
 
-  const isAuthPage = pathname === '/login' || pathname === '/signup';
-  const isHomePage = pathname === '/';
-
   return (
-    <header className={cn(
-        "absolute top-0 z-50 w-full",
-        !isHomePage && "sticky bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
-      )}>
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container flex h-20 items-center">
         <div className="mr-auto flex-shrink-0">
           <Logo />
         </div>
 
         <nav className="hidden gap-8 md:flex mx-auto items-center">
-          {navLinks.map(link => <NavLink key={link.href + link.label} {...link} className={cn(isHomePage && "text-white/80 hover:text-white", pathname === link.href ? (isHomePage ? "text-white font-bold after:bg-white" : "text-primary font-bold") : (isHomePage ? "text-white/80" : "text-foreground/80"),  isHomePage && "after:bg-white" )} />)}
+          {navLinks.map(link => <NavLink key={link.href} {...link} />)}
         </nav>
 
         <div className="flex flex-shrink-0 items-center justify-end space-x-4">
@@ -68,10 +62,10 @@ export function Navbar() {
             <Skeleton className="h-10 w-32 rounded-full" />
           ) : user ? (
             <div className='hidden md:flex items-center gap-4'>
-              <span className={cn("text-sm font-medium", isHomePage ? "text-white" : "text-foreground")}>
+              <span className="text-sm font-medium text-foreground">
                 Welcome, {user.displayName || user.email?.split('@')[0]}
               </span>
-              <Button variant="outline" size="sm" onClick={logout} className={cn("rounded-full", isHomePage && "bg-white/20 text-white border-white/50 hover:bg-white/30 hover:text-white")}>
+              <Button variant="outline" size="sm" onClick={logout} className="rounded-full">
                 Logout
               </Button>
             </div>
@@ -86,7 +80,7 @@ export function Navbar() {
         <div className="md:hidden">
            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(isHomePage ? "text-white" : "text-foreground")}>
+              <Button variant="ghost" size="icon" className="text-foreground">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>

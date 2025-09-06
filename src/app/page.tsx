@@ -14,7 +14,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <div className="mt-32">
+      <div className="mt-12">
         <WhatWeDo />
         <FeaturedProperties properties={properties} />
         <PropertiesForSale properties={properties} />
