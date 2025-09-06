@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
+import { Logo } from '../layout/Logo';
 
 export function Newsletter() {
   const { toast } = useToast();
@@ -54,6 +56,22 @@ export function Newsletter() {
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Submit'}
               </Button>
             </form>
+          </div>
+          <div className="mt-24 border-t border-primary-foreground/20 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="text-primary-foreground">
+                    <Logo />
+                </div>
+                <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <Link href="/listings" className="text-primary-foreground/80 hover:text-primary-foreground">For Sale</Link>
+                    <Link href="/listings" className="text-primary-foreground/80 hover:text-primary-foreground">Rentals</Link>
+                    <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground">New Projects</Link>
+                    <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Property News</Link>
+                </nav>
+                <div className="text-sm text-primary-foreground/80">
+                    <p>©2025 Propbot. All rights reserved</p>
+                </div>
+            </div>
           </div>
       </div>
     </section>

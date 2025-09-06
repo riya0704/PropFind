@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation';
 import { Navbar } from '@/components/layout/Navbar';
-import { Footer } from '@/components/layout/Footer';
 import Image from 'next/image';
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
@@ -28,13 +27,10 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
 }
 
 function DefaultLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
-  const isNewsletterPage = pathname === '/'; 
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-grow">{children}</main>
-      {isNewsletterPage && <Footer />}
     </div>
   );
 }
