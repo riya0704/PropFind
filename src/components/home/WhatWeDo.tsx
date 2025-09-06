@@ -1,24 +1,27 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { TrendingUp, KeyRound, Search, Lock } from 'lucide-react';
+import BuyAndSellIcon from '../icons/BuyAndSellIcon';
+import FindRentalIcon from '../icons/FindRentalIcon';
+import SearchPropertyIcon from '../icons/SearchPropertyIcon';
+import SafeSecureIcon from '../icons/SafeSecureIcon';
 
 const services = [
   {
-    icon: <TrendingUp className="h-8 w-8 text-primary" />,
+    icon: <BuyAndSellIcon />,
     title: 'Buy & Sell Properties',
     description: 'Find verified homes for sale or list your property with ease.'
   },
   {
-    icon: <KeyRound className="h-8 w-8 text-primary" />,
+    icon: <FindRentalIcon />,
     title: 'Find Rental Homes',
     description: 'Browse through thousands of rental options suited to your needs'
   },
   {
-    icon: <Search className="h-8 w-8 text-primary" />,
+    icon: <SearchPropertyIcon />,
     title: 'Smart AI Property Search',
     description: 'Get instant recommendations based on your budget & location'
   },
   {
-    icon: <Lock className="h-8 w-8 text-primary" />,
+    icon: <SafeSecureIcon />,
     title: 'Safe & Secure Transactions',
     description: 'Verified listings & secure deals to ensure a smooth experience.'
   }

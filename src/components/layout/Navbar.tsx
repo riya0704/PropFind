@@ -15,6 +15,7 @@ import {
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '../ui/skeleton';
+import LoginRegisterIcon from '../icons/LoginRegisterIcon';
 
 export function Navbar() {
   const { user, logout, loading } = useAuth();
@@ -79,7 +80,7 @@ export function Navbar() {
           ) : (
             <nav className="hidden md:flex items-center space-x-2">
               <Button size="lg" asChild className="rounded-full">
-                <Link href="/login">Login / Register <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <Link href="/login">Login / Register <LoginRegisterIcon /></Link>
               </Button>
             </nav>
           )}

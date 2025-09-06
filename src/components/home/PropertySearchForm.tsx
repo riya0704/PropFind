@@ -5,6 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Home, MapPin, Search } from "lucide-react"
 import { Input } from "../ui/input"
 import HomeIcon from "../icons/HomeIcon"
+import LocationIcon from "../icons/LocationIcon"
 
 const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -28,7 +29,9 @@ export function PropertySearchForm() {
              <Button variant="outline" className="absolute top-6 right-6 bg-white rounded-full text-primary border-primary hover:bg-primary hover:text-white">List Your Property</Button>
             <div className="relative mb-4">
                 <Input placeholder="Search Location..." className="h-14 pl-12 text-base border-gray-200 focus-visible:ring-1 focus-visible:ring-primary" />
-                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
+                <div className="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground">
+                    <LocationIcon />
+                </div>
                 <Search className="absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 text-muted-foreground" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 items-center gap-4">
