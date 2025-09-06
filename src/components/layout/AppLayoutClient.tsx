@@ -28,11 +28,13 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
 }
 
 function DefaultLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isNewsletterPage = pathname === '/'; 
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-grow">{children}</main>
-      <Footer />
+      {isNewsletterPage && <Footer />}
     </div>
   );
 }

@@ -41,16 +41,16 @@ export function Newsletter() {
             <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
               Subscribe now for exclusive property insights and deals!
             </p>
-            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex items-center p-2 bg-white/20 rounded-full">
+            <form onSubmit={handleSubmit} className="mt-8 mx-auto max-w-sm flex items-center p-2 bg-white rounded-full">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-transparent text-white border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-neutral-300"
+                className="bg-transparent text-foreground border-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
               />
-              <Button type="submit" variant="secondary" disabled={loading} className="rounded-full shrink-0 text-primary hover:bg-secondary/90">
+              <Button type="submit" variant="default" disabled={loading} className="rounded-full shrink-0 bg-primary hover:bg-primary/90 text-white">
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Submit'}
               </Button>
             </form>
