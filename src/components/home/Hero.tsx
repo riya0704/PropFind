@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import { PropertySearchForm } from './PropertySearchForm';
 
 export function Hero() {
   return (
-    <div className="relative bg-secondary/30">
-        <div className="relative h-[calc(100vh-80px)] min-h-[600px] md:min-h-[700px] w-full">
+    <div className="relative bg-secondary/30 px-4 pt-4">
+        <div className="relative h-[calc(100vh-120px)] min-h-[500px] md:min-h-[600px] w-full overflow-hidden rounded-2xl">
             <Image
                 src="https://picsum.photos/1600/900?random=2"
                 alt="Large modern house"
