@@ -24,7 +24,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/listings', label: 'Buy' },
+    { href: '/buy', label: 'Buy' },
     { href: '#', label: 'Rent' },
     { href: '/image-analyzer', label: 'Sell' },
     { href: '#', label: 'About Us' },
