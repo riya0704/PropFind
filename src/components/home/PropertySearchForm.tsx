@@ -14,10 +14,10 @@ const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function PropertySearchForm() {
     return (
-        <div className="bg-background p-4 rounded-full shadow-2xl w-full border">
-            <div className="flex flex-col md:flex-row items-center gap-4">
+        <div className="bg-background p-2 rounded-full shadow-2xl w-full max-w-5xl border">
+            <div className="flex flex-col md:flex-row items-center gap-y-2 w-full">
                 <Select defaultValue="buy">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
+                    <SelectTrigger className="w-full md:w-1/4 h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-l-full pl-6 pr-8 bg-transparent">
                          <div className="flex items-center gap-2">
                             <Edit className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="For Buying" />
@@ -28,9 +28,11 @@ export function PropertySearchForm() {
                         <SelectItem value="rent">For Rent</SelectItem>
                     </SelectContent>
                 </Select>
+                
                 <div className="w-px h-8 bg-border hidden md:block" />
+
                 <Select defaultValue="house">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
+                    <SelectTrigger className="w-full md:w-1/4 h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 bg-transparent pl-6 pr-8">
                          <div className="flex items-center gap-2">
                              <Home className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="House" />
@@ -42,9 +44,11 @@ export function PropertySearchForm() {
                         <SelectItem value="condo">Condo</SelectItem>
                     </SelectContent>
                 </Select>
+                
                 <div className="w-px h-8 bg-border hidden md:block" />
+
                 <Select defaultValue="indonesia">
-                    <SelectTrigger className="w-full md:w-auto h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 rounded-full pl-6 pr-8 bg-transparent">
+                    <SelectTrigger className="w-full md:w-1/4 h-14 text-base border-0 focus:ring-0 focus:ring-offset-0 bg-transparent pl-6 pr-8">
                          <div className="flex items-center gap-2">
                             <MapPin className="h-5 w-5 text-muted-foreground" />
                             <SelectValue placeholder="Indonesia" />
@@ -56,7 +60,8 @@ export function PropertySearchForm() {
                         <SelectItem value="uk">UK</SelectItem>
                     </SelectContent>
                 </Select>
-                <Button size="lg" className="w-full md:w-auto md:flex-grow h-14 text-base rounded-full px-10">
+
+                <Button size="lg" className="w-full md:w-1/4 h-14 text-base rounded-full md:rounded-l-none bg-[#3B82F6] hover:bg-blue-600 px-10">
                     Find Property
                 </Button>
             </div>
