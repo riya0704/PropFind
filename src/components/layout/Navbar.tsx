@@ -54,7 +54,7 @@ export function Navbar() {
         </div>
 
         <nav className="hidden gap-8 md:flex mx-auto items-center">
-          {navLinks.map(link => <NavLink key={link.href} {...link} />)}
+          {navLinks.map(link => <NavLink key={link.label} {...link} />)}
         </nav>
 
         <div className="flex flex-shrink-0 items-center justify-end space-x-4">
@@ -97,7 +97,7 @@ export function Navbar() {
                     </SheetTrigger>
                 </div>
                 <nav className="flex flex-col gap-4">
-                  {navLinks.map(link => <NavLink key={link.href} {...link} className="text-lg text-foreground/80"/>)}
+                  {navLinks.map(link => <NavLink key={link.label} {...link} className="text-lg text-foreground/80"/>)}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4 pt-6">
                   {loading ? null : user ? (
