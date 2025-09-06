@@ -32,7 +32,7 @@ export function WhatWeDo() {
     <section>
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">What We Do?</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">What We Do?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Helping you find, buy, and rent the perfect property with ease.
           </p>

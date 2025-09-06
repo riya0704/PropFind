@@ -11,7 +11,7 @@ export function PropertiesForSale({ properties }: { properties: Property[] }) {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-12">
             <div className="flex-1">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Best Properties Available For Sale</h2>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Best Properties Available For Sale</h2>
                 <p className="mt-2 text-lg text-muted-foreground max-w-3xl">
                     Browse our top-rated properties for sale, featuring premium listings tailored to your needs. Find your dream home today!
                 </p>
