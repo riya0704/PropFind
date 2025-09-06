@@ -14,19 +14,19 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-screen flex-col bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between">
-          <Button variant="outline" className="rounded-full" asChild>
+          <Button variant="outline" className="rounded-full hidden sm:flex" asChild>
             <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Homepage</Link>
           </Button>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Logo />
           </div>
-          <Button className="rounded-full" asChild>
+          <Button className="rounded-full hidden sm:flex" asChild>
             <Link href="#">About Us <LoginRegisterIcon /></Link>
           </Button>
         </div>
       </header>
       <main className="flex-grow flex items-stretch">
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
+        <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8">
             {children}
         </div>
         <div className="w-1/2 relative hidden lg:block">

@@ -36,15 +36,15 @@ export function PropertyListings({ properties }: PropertyListingsProps) {
     });
 
   return (
-    <div className="container py-12">
+    <div className="container py-8 sm:py-12">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8 p-4 bg-secondary rounded-lg border">
         <Input 
           placeholder="Search by name, city, state..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="max-w-sm"
+          className="max-w-full md:max-w-sm"
         />
-        <div className="flex flex-wrap items-center justify-center gap-6">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6">
           <RadioGroup defaultValue="all" onValueChange={(value: FilterType) => setFilter(value)} className="flex items-center gap-4">
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="all" id="all" />
@@ -60,7 +60,7 @@ export function PropertyListings({ properties }: PropertyListingsProps) {
             </div>
           </RadioGroup>
           <Select onValueChange={setSortOrder} defaultValue={sortOrder}>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-full sm:w-[180px]">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>

@@ -9,7 +9,7 @@ export function FeaturedProperty({ properties }: { properties: Property[] }) {
     <section className="py-24 sm:py-32">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center gap-4 mb-12">
-            <div>
+            <div className="flex-1">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Featured Property</h2>
             </div>
           <Button asChild variant="outline" className="rounded-full">
@@ -18,7 +18,7 @@ export function FeaturedProperty({ properties }: { properties: Property[] }) {
             </Link>
           </Button>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-1 lg:grid-cols-2">
           {properties.map(property => (
             <PropertyCard key={property.id} property={property} />
           ))}

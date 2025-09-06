@@ -58,7 +58,7 @@ export function Newsletter() {
             </form>
           </div>
           <div className="mt-24 border-t border-primary-foreground/20 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
                 <div className="text-primary-foreground">
                     <Logo />
                 </div>

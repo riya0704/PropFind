@@ -70,7 +70,7 @@ export function SignupForm() {
 
   return (
     <div className="w-full max-w-md">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Create new account</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8 text-center sm:text-left">Create new account</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField

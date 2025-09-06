@@ -92,120 +92,120 @@ const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
         </g>
         </g>
         <defs>
-        <filter id="filter0_f_18_57" x="-0.390001" y="16.6376" width="13.1247" height="12.2721" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter0_f_18_57" x="-0.390001" y="16.6376" width="13.1247" height="12.2721" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter1_f_18_57" x="15.4176" y="0.341627" width="12.2302" height="9.96592" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter1_f_18_57" x="15.4176" y="0.341627" width="12.2302" height="9.96592" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter2_f_18_57" x="3.58998" y="0.320875" width="13.3303" height="10.9862" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter2_f_18_57" x="3.58998" y="0.320875" width="13.3303" height="10.9862" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter3_f_18_57" x="14.4039" y="16.8977" width="17.9607" height="16.8539" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter3_f_18_57" x="14.4039" y="16.8977" width="17.9607" height="16.8539" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter4_f_18_57" x="15.6281" y="13.3136" width="16.7624" height="7.58866" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter4_f_18_57" x="15.6281" y="13.3136" width="16.7624" height="7.58866" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter5_f_18_57" x="-0.394396" y="5.57973" width="11.053" height="12.6447" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter5_f_18_57" x="-0.394396" y="5.57973" width="11.053" height="12.6447" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter6_f_18_57" x="0.0144858" y="-1.19932" width="16.0579" height="14.7167" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter6_f_18_57" x="0.0144858" y="-1.19932" width="16.0579" height="14.7167" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="1.65243" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter7_f_18_57" x="4.31264" y="24.7348" width="12.4909" height="9.04148" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter7_f_18_57" x="4.31264" y="24.7348" width="12.4909" height="9.04148" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
-        <filter id="filter8_f_18_57" x="13.9162" y="25.7798" width="4.83713" height="7.99643" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+        <filter id="filter8_f_18_57" x="13.9162" y="25.7798" width="4.83713" height="7.99643" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
         <feGaussianBlur stdDeviation="0.23504" result="effect1_foregroundBlur_18_57"/>
         </filter>
         <radialGradient id="paint0_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-0.652028 -16.007 23.4431 -0.960568 12.1182 28.1984)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.141612" stopColor="#1ABD4D"/>
-        <stop offset="0.247515" stopColor="#6EC30D"/>
-        <stop offset="0.311547" stopColor="#8AC502"/>
-        <stop offset="0.366013" stopColor="#A2C600"/>
-        <stop offset="0.445673" stopColor="#C8C903"/>
-        <stop offset="0.540305" stopColor="#EBCB03"/>
-        <stop offset="0.615636" stopColor="#F7CD07"/>
-        <stop offset="0.699345" stopColor="#FDCD04"/>
-        <stop offset="0.771242" stopColor="#FDCE05"/>
-        <stop offset="0.860566" stopColor="#FFCE0A"/>
+        <stop offset="0.141612" stop-color="#1ABD4D"/>
+        <stop offset="0.247515" stop-color="#6EC30D"/>
+        <stop offset="0.311547" stop-color="#8AC502"/>
+        <stop offset="0.366013" stop-color="#A2C600"/>
+        <stop offset="0.445673" stop-color="#C8C903"/>
+        <stop offset="0.540305" stop-color="#EBCB03"/>
+        <stop offset="0.615636" stop-color="#F7CD07"/>
+        <stop offset="0.699345" stop-color="#FDCD04"/>
+        <stop offset="0.771242" stop-color="#FDCE05"/>
+        <stop offset="0.860566" stop-color="#FFCE0A"/>
         </radialGradient>
         <radialGradient id="paint1_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(11.0732 -2.72621e-05 -1.55639e-05 14.3428 26.7386 9.49671)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.408458" stopColor="#FB4E5A"/>
-        <stop offset="1" stopColor="#FF4540"/>
+        <stop offset="0.408458" stop-color="#FB4E5A"/>
+        <stop offset="1" stop-color="#FF4540"/>
         </radialGradient>
         <radialGradient id="paint2_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-15.5144 8.6182 11.6604 21.1152 20.692 -1.28521)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.231273" stopColor="#FF4541"/>
-        <stop offset="0.311547" stopColor="#FF4540"/>
-        <stop offset="0.457516" stopColor="#FF4640"/>
-        <stop offset="0.540305" stopColor="#FF473F"/>
-        <stop offset="0.699346" stopColor="#FF5138"/>
-        <stop offset="0.771242" stopColor="#FF5B33"/>
-        <stop offset="0.860566" stopColor="#FF6C29"/>
-        <stop offset="1" stopColor="#FF8C18"/>
+        <stop offset="0.231273" stop-color="#FF4541"/>
+        <stop offset="0.311547" stop-color="#FF4540"/>
+        <stop offset="0.457516" stop-color="#FF4640"/>
+        <stop offset="0.540305" stop-color="#FF473F"/>
+        <stop offset="0.699346" stop-color="#FF5138"/>
+        <stop offset="0.771242" stop-color="#FF5B33"/>
+        <stop offset="0.860566" stop-color="#FF6C29"/>
+        <stop offset="1" stop-color="#FF8C18"/>
         </radialGradient>
         <radialGradient id="paint3_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-28.1358 -36.8367 -13.5573 10.4163 16.5649 31.2012)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.131546" stopColor="#0CBA65"/>
-        <stop offset="0.209784" stopColor="#0BB86D"/>
-        <stop offset="0.297297" stopColor="#09B479"/>
-        <stop offset="0.396257" stopColor="#08AD93"/>
-        <stop offset="0.477124" stopColor="#0AA6A9"/>
-        <stop offset="0.568425" stopColor="#0D9CC6"/>
-        <stop offset="0.667385" stopColor="#1893DD"/>
-        <stop offset="0.768727" stopColor="#258BF1"/>
-        <stop offset="0.858506" stopColor="#3086FF"/>
+        <stop offset="0.131546" stop-color="#0CBA65"/>
+        <stop offset="0.209784" stop-color="#0BB86D"/>
+        <stop offset="0.297297" stop-color="#09B479"/>
+        <stop offset="0.396257" stop-color="#08AD93"/>
+        <stop offset="0.477124" stop-color="#0AA6A9"/>
+        <stop offset="0.568425" stop-color="#0D9CC6"/>
+        <stop offset="0.667385" stop-color="#1893DD"/>
+        <stop offset="0.768727" stop-color="#258BF1"/>
+        <stop offset="0.858506" stop-color="#3086FF"/>
         </radialGradient>
         <radialGradient id="paint4_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-1.99111 17.2127 23.7294 2.76118 14.9579 3.82676)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.366013" stopColor="#FF4E3A"/>
-        <stop offset="0.457516" stopColor="#FF8A1B"/>
-        <stop offset="0.540305" stopColor="#FFA312"/>
-        <stop offset="0.615636" stopColor="#FFB60C"/>
-        <stop offset="0.771242" stopColor="#FFCD0A"/>
-        <stop offset="0.860566" stopColor="#FECF0A"/>
-        <stop offset="0.915033" stopColor="#FECF08"/>
-        <stop offset="1" stopColor="#FDCD01"/>
+        <stop offset="0.366013" stop-color="#FF4E3A"/>
+        <stop offset="0.457516" stop-color="#FF8A1B"/>
+        <stop offset="0.540305" stop-color="#FFA312"/>
+        <stop offset="0.615636" stop-color="#FFB60C"/>
+        <stop offset="0.771242" stop-color="#FFCD0A"/>
+        <stop offset="0.860566" stop-color="#FECF0A"/>
+        <stop offset="0.915033" stop-color="#FECF08"/>
+        <stop offset="1" stop-color="#FDCD01"/>
         </radialGradient>
         <radialGradient id="paint5_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-5.75533 6.38408 -17.9535 -16.2812 12.1586 3.6482)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.315904" stopColor="#FF4C3C"/>
-        <stop offset="0.603818" stopColor="#FF692C"/>
-        <stop offset="0.726837" stopColor="#FF7825"/>
-        <stop offset="0.884534" stopColor="#FF8D1B"/>
-        <stop offset="1" stopColor="#FF9F13"/>
+        <stop offset="0.315904" stop-color="#FF4C3C"/>
+        <stop offset="0.603818" stop-color="#FF692C"/>
+        <stop offset="0.726837" stop-color="#FF7825"/>
+        <stop offset="0.884534" stop-color="#FF8D1B"/>
+        <stop offset="1" stop-color="#FF9F13"/>
         </radialGradient>
-        <radialGradient id="paint6_radial_18_57" cx="0"cy="0" r="1" gradientTransform="matrix(-15.5144 -8.6182 11.6604 -21.1152 20.692 35.2846)" gradientUnits="userSpaceOnUse">
-        <stop offset="0.231273" stopColor="#0FBC5F"/>
-        <stop offset="0.311547" stopColor="#0FBC5F"/>
-        <stop offset="0.366013" stopColor="#0FBC5E"/>
-        <stop offset="0.457516" stopColor="#0FBC5D"/>
-        <stop offset="0.540305" stopColor="#12BC58"/>
-        <stop offset="0.699346" stopColor="#28BF3C"/>
-        <stop offset="0.771242" stopColor="#38C02B"/>
-        <stop offset="0.860566" stopColor="#52C218"/>
-        <stop offset="0.915033" stopColor="#67C30F"/>
-        <stop offset="1" stopColor="#86C504"/>
+        <radialGradient id="paint6_radial_18_57" cx="0" cy="0" r="1" gradientTransform="matrix(-15.5144 -8.6182 11.6604 -21.1152 20.692 35.2846)" gradientUnits="userSpaceOnUse">
+        <stop offset="0.231273" stop-color="#0FBC5F"/>
+        <stop offset="0.311547" stop-color="#0FBC5F"/>
+        <stop offset="0.366013" stop-color="#0FBC5E"/>
+        <stop offset="0.457516" stop-color="#0FBC5D"/>
+        <stop offset="0.540305" stop-color="#12BC58"/>
+        <stop offset="0.699346" stop-color="#28BF3C"/>
+        <stop offset="0.771242" stop-color="#38C02B"/>
+        <stop offset="0.860566" stop-color="#52C218"/>
+        <stop offset="0.915033" stop-color="#67C30F"/>
+        <stop offset="1" stop-color="#86C504"/>
         </radialGradient>
         <linearGradient id="paint7_linear_18_57" x1="14.3862" y1="29.778" x2="18.2833" y2="29.778" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#0FBC5C"/>
-        <stop offset="1" stopColor="#0CBA65"/>
+        <stop stop-color="#0FBC5C"/>
+        <stop offset="1" stop-color="#0CBA65"/>
         </linearGradient>
         </defs>
     </svg>
@@ -246,7 +246,7 @@ export function LoginForm() {
   return (
     <div className="flex-1 flex items-center justify-center p-4 md:p-8">
       <div className="max-w-md w-full">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Log In</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8 text-center sm:text-left">Log In</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
@@ -293,7 +293,7 @@ export function LoginForm() {
               )}
             />
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between flex-wrap gap-4">
               <FormField
                 control={form.control}
                 name="rememberMe"

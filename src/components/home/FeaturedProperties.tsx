@@ -9,7 +9,7 @@ export function FeaturedProperties({ properties }: { properties: Property[] }) {
     <section className="py-24 sm:py-32">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center gap-4 mb-12">
-          <div>
+          <div className="flex-1">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline text-primary">Featured Property</h2>
           </div>
           <Button asChild variant="outline" className="rounded-full">
@@ -18,8 +18,8 @@ export function FeaturedProperties({ properties }: { properties: Property[] }) {
             </Link>
           </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[600px]">
-          <div className="relative h-full w-full rounded-2xl overflow-hidden group">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-auto md:h-[600px]">
+          <div className="relative h-[400px] md:h-full w-full rounded-2xl overflow-hidden group">
             <Image
               src="https://picsum.photos/800/1200?random=21"
               alt="Kenanga Residence"
@@ -33,8 +33,8 @@ export function FeaturedProperties({ properties }: { properties: Property[] }) {
               <h3 className="text-2xl font-bold mt-1">Kenanga Residence</h3>
             </div>
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 gap-6 h-full">
-            <div className="relative h-full w-full rounded-2xl overflow-hidden group col-span-1 row-span-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-6 h-full">
+            <div className="relative h-[300px] sm:h-full w-full rounded-2xl overflow-hidden group col-span-1 row-span-2">
                  <Image
                     src="https://picsum.photos/600/1200?random=22"
                     alt="Property 2"
@@ -43,7 +43,7 @@ export function FeaturedProperties({ properties }: { properties: Property[] }) {
                     data-ai-hint="modern home exterior"
                 />
             </div>
-             <div className="relative h-full w-full rounded-2xl overflow-hidden group">
+             <div className="relative h-[300px] sm:h-full w-full rounded-2xl overflow-hidden group">
                  <Image
                     src="https://picsum.photos/600/600?random=23"
                     alt="Property 3"
