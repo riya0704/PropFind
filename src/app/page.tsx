@@ -19,8 +19,8 @@ export default async function HomePage() {
         <FeaturedProperties properties={properties} />
         <PropertiesForSale properties={properties} />
         <PropertiesForRent properties={properties} />
-        <ValuableClients />
         <StartJourney />
+        <ValuableClients />
         <Newsletter />
       </div>
     </>
