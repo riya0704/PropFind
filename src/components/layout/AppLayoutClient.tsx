@@ -7,6 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Logo } from './Logo';
 import { Navbar } from './Navbar';
+import LoginRegisterIcon from '../icons/LoginRegisterIcon';
 
 function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,7 +21,7 @@ function AuthLayout({ children }: { children: React.ReactNode }) {
             <Logo />
           </div>
           <Button className="rounded-full" asChild>
-            <Link href="#">About Us <ArrowLeft className="ml-2 h-4 w-4 rotate-180" /></Link>
+            <Link href="#">About Us <LoginRegisterIcon /></Link>
           </Button>
         </div>
       </header>
