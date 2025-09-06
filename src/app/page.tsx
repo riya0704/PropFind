@@ -4,8 +4,9 @@ import { Newsletter } from '@/components/home/Newsletter';
 import { WhatWeDo } from '@/components/home/WhatWeDo';
 import { StartJourney } from '@/components/home/StartJourney';
 import { ValuableClients } from '@/components/home/ValuableClients';
-import { PropertiesForSaleAndRent } from '@/components/home/PropertiesForSaleAndRent';
+import { PropertiesForSale } from '@/components/home/PropertiesForSale';
 import { FeaturedProperties } from '@/components/home/FeaturedProperties';
+import { PropertiesForRent } from '@/components/home/PropertiesForRent';
 
 export default async function HomePage() {
   const properties = await getProperties();
@@ -16,7 +17,8 @@ export default async function HomePage() {
       <div className="mt-32">
         <WhatWeDo />
         <FeaturedProperties properties={properties} />
-        <PropertiesForSaleAndRent properties={properties} />
+        <PropertiesForSale properties={properties} />
+        <PropertiesForRent properties={properties} />
         <ValuableClients />
         <StartJourney />
         <Newsletter />
