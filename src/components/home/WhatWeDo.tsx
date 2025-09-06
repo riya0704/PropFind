@@ -1,26 +1,26 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { TrendingUp, Home, Search, Lock } from 'lucide-react';
+import { TrendingUp, KeyRound, Search, Lock } from 'lucide-react';
 
 const services = [
   {
     icon: <TrendingUp className="h-8 w-8 text-primary" />,
     title: 'Buy & Sell Properties',
-    description: 'We provide a seamless experience for buying and selling properties at the best market prices.'
+    description: 'Find verified homes for sale or list your property with ease.'
   },
   {
-    icon: <Home className="h-8 w-8 text-primary" />,
-    title: 'Find a New Home',
-    description: 'Discover a wide range of rental properties that fit your lifestyle and budget, and find your new home.'
+    icon: <KeyRound className="h-8 w-8 text-primary" />,
+    title: 'Find Rental Homes',
+    description: 'Browse through thousands of rental options suited to your needs'
   },
   {
     icon: <Search className="h-8 w-8 text-primary" />,
-    title: 'Smart Property Search',
-    description: 'Our smart search helps you find the perfect property with advanced filters and recommendations.'
+    title: 'Smart AI Property Search',
+    description: 'Get instant recommendations based on your budget & location'
   },
   {
     icon: <Lock className="h-8 w-8 text-primary" />,
-    title: 'Safe & Secure',
-    description: 'Your transactions and data are safe and secure with our advanced security measures.'
+    title: 'Safe & Secure Transactions',
+    description: 'Verified listings & secure deals to ensure a smooth experience.'
   }
 ];
 
@@ -31,19 +31,19 @@ export function WhatWeDo() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">What We Do?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Helping you find, buy, and own the perfect property with ease.
+            Helping you find, buy, and rent the perfect property with ease.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
-            <Card key={index} className="text-center group hover:bg-white hover:shadow-xl transition-all rounded-2xl">
+            <Card key={index} className="text-center group bg-white shadow-lg transition-all rounded-2xl border-transparent hover:shadow-2xl hover:-translate-y-2">
               <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary transition-all">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-secondary transition-all">
                   {service.icon}
                 </div>
               </CardHeader>
               <CardContent>
-                <CardTitle className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold mb-2 text-foreground transition-colors">{service.title}</CardTitle>
                 <p className="text-muted-foreground text-sm">{service.description}</p>
               </CardContent>
             </Card>
