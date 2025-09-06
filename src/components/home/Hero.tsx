@@ -17,10 +17,10 @@ export function Hero() {
           <div className="relative z-10 w-full h-full flex flex-col justify-end p-8 md:p-12">
             <div className="max-w-2xl text-white">
               <h1 className="font-headline text-5xl font-bold md:text-6xl tracking-wide">
-                Featured Properties For Sale
+                Find Your Perfect Home
               </h1>
               <p className="mt-4 text-lg text-neutral-200">
-                Discover, Buy, or Rent Verified Properties with Ease.
+                With the most complete and verified real estate listings.
               </p>
             </div>
           </div>
