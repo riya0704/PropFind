@@ -3,9 +3,9 @@ import { PropertySearchForm } from './PropertySearchForm';
 
 export function Hero() {
   return (
-    <section className="relative bg-secondary/30 pb-20 pt-12 sm:pb-24 sm:pt-16">
+    <section className="relative bg-secondary/30 pb-12 pt-12">
       <div className="container">
-        <div className="relative h-[600px] rounded-3xl overflow-hidden flex items-center">
+        <div className="relative h-[600px] rounded-3xl overflow-hidden">
           <Image
             src="https://picsum.photos/1600/900?random=2"
             alt="Large modern house"
@@ -25,9 +25,9 @@ export function Hero() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-full max-w-5xl px-4">
-          <PropertySearchForm />
+           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 w-full max-w-5xl px-4">
+            <PropertySearchForm />
+          </div>
         </div>
       </div>
     </section>
